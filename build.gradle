@@ -1,0 +1,35 @@
+buildscript {
+    ext.app_min_sdk_version = 21
+    ext.app_target_sdk_version = 27
+    ext.app_compile_sdk_version = 27
+
+    ext.kotlin_version = '1.2.60'
+    ext.rx_version = '2.2.0'
+    ext.android_support_version = '27.1.1'
+    ext.logger_version = '2.2.0'
+
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'gradle.plugin.de.fuerstenau:BuildConfigPlugin:1.1.8'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hermann.arch.core">
+
+    <application>
+        <activity
+            android:name="com.example.hermann.arch.core.MainActivity"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/app_host"
+                    android:scheme="@string/app_scheme" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>
